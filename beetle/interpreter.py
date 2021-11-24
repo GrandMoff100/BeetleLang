@@ -1,5 +1,5 @@
 import rply
-from commands import Program
+from beetle.commands import Program
 
 
 class Interpreter:
