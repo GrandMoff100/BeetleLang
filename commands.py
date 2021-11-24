@@ -12,7 +12,7 @@ class CommandQueue:
         try: 
             command = self.commands[0]
         except IndexError:
-            exit(logging.error(f'Expected a command after command {self.index}'))
+            exit(logging.error(f'Expected a hex pair after pair {self.index}'))
         else:
             self.commands.pop(0)
             self.index += 1
@@ -117,5 +117,16 @@ class Div(Command):
         a = program.run_next()
         b = program.run_next()
         return a / b
+
+
+class String(Command):
+    text = '02'
+
+    def run(self, program: Program):
+        length = int(program.run_next(raw=True), 16)
+        pairs = map(lambda _: program.run_next(raw=True), range(length))
+        numbers = map(lambda pair: int(pair, 16), pairs)
+        chars = map(chr, numbers)
+        return ''.join(chars)
 
 

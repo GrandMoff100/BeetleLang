@@ -7,6 +7,11 @@ Beetle is simple language written in two digit hex pairs.
 
 ## Usage
 
+### Hello World
+Printing "Hello World!" in Beetle is the following
+
+`ff 02 0c 48 65 6c 6c 6f 20 57 6f 72 6c 64 21`
+
 
 ## Syntax Rules
 
@@ -56,3 +61,4 @@ Returns the first expression multiplied by the second expression
 `13 <expression> <expression>`
 
 Returns the first expression divided by the second expression
+
