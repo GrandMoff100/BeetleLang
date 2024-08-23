@@ -24,7 +24,7 @@ Outputs the object or expression.
 **Example**
 `ff 01 02 10 00`
 
-Prints `4096` because `1000` in base 16 in `4096` in base 10..
+Prints `4096` because `1000` in base 16 is `4096`
 
 
 ### Integers
